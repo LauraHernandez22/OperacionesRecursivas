@@ -1,0 +1,21 @@
+public class Principal
+{
+    public static void main (String []args){
+        OperacionesRecursivas programa = new OperacionesRecursivas();
+        System.out.println("La suma de los primeros 100 números enteros es: " + programa.sumaNenteros(100));
+    }
+}
+
+class OperacionesRecursivas { //Inicia la clase
+    public long sumaNenteros(int n){
+        if (n==1)
+            return 1;
+        else {
+            long suma;
+            suma = sumaNenteros(n - 1);
+            System.out.println(n + suma);
+            return n + suma;
+            //return n + sumaNenteros(n-1);
+        }            
+    }//SumaNenteros
+}//Aquí termina la clase
